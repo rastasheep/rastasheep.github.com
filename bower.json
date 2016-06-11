@@ -1,0 +1,21 @@
+{
+  "name": "rastasheep.github.io",
+  "description": "rastasheep does personal website",
+  "main": "index.js",
+  "authors": [
+    "Aleksandar Diklic"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rastasheep/rastasheep.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.5.0"
+  }
+}
