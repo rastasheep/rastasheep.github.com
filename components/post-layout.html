@@ -1,0 +1,56 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="post-layout">
+  <style>
+    /* Fixes for IE 10 */
+    .mdl-grid {
+      display: flex !important;
+    }
+    .demo-blog {
+      font-family: 'Roboto', 'Helvetica', sans-serif;
+    }
+    .demo-blog.mdl-layout .mdl-layout__content {
+      position: relative;
+      -webkit-overflow-scrolling: touch;
+    }
+    .demo-blog .demo-blog__posts {
+      max-width: 900px;
+      padding: 0;
+      display: flex;
+      width: 100%;
+      margin: 0 auto;
+      flex-shrink: 0;
+      margin-bottom: 120px;
+    }
+    .demo-blog .mdl-card {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      min-height: 360px;
+    }
+  </style>
+
+  <template>
+    <div class="mdl-layout__container">
+      <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded is-small-screen">
+        <main class="mdl-layout__content">
+
+          <div class="demo-blog__posts mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+              <content></content>
+            </div>
+          </div>
+
+        </main>
+        <div class="mdl-layout__obfuscator"></div>
+      </div>
+    </div>
+  </template>
+
+</dom-module>
+
+<script>
+  Polymer({
+    is: "post-layout",
+  });
+</script>

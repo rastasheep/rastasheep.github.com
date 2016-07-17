@@ -1,0 +1,99 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="post-author-rastasheep">
+  <style>
+    .section-spacer {
+      flex-grow: 1;
+    }
+
+    .mdl-card__supporting-text {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 16px;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+    }
+
+    .demo-blog .meta {
+      box-sizing: border-box;
+      padding: 16px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      height: auto;
+    }
+    .meta > * {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .minilogo {
+      margin-right: 16px;
+    }
+    @media (min-width: 489px) {
+      .minilogo {
+        width: 44px;
+        height: 44px;
+        background-color: rgb(201, 199, 201);
+        background-image: url('https://github.com/rastasheep.png?size=44');
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 22px;
+      }
+    }
+
+    .social-btn {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      margin: 0 16px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      opacity: 0.46;
+      border-radius: 2px;
+    }
+    .social-btn__twitter {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAABl0lEQVR4Ae3XP0hVcRjH4UexCDJcImmpTYXGkKKhIopoCIcGiaCiPzS0BkFD1NAaQWBS0KRNwVUJG6IpaGhprKWgpaUwSy266n3bojw/9PwLDO7nu50zPHDgHY5266p+E76Jips3ZUCiPl9ETZtNEY9FjZuUaaZWYE6mJVHrMi3/Z0AbWDDmsjNueS+EsGyuKPDUV5HchF4AG4364I5BM0WB3fYmr7uh08o6jFssCnRjl3crnv7QK9tBF1xfHWhlgK2gx8O/3j2RbkizKHAUwKDG70sfkeqUJVEUGPdn25x13wu3pRoTxYEFh+Rtugyw03Eb5OttGWC/vG22VAYYk7fDogwQTsvX3TxAJNYyYru12uRTWeCnEw7osHqXRFkgXLVWW3ysAjQNWb0HogoQWh45oke6c6IEkNkb+6Q6abEq8N20YV2ydbqhJcoDzx3Tr0u6PV4JUQUIn920w8q6DXsmRAkgsZbX7rnivIuuGfVSU4jqQImtf6ANzP/rH5CpWoGGTANmRU2b0UeKmDRXw8dp6NNuHfULAS/gIhk6B9YAAAAASUVORK5CYII=);
+    }
+    .social-btn__facebook {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAq0lEQVR4Ae3XMQqDUAyA4b+Tg/ewgsfpYbyQY8HqmdwEK9WxbTo+4T1opQk45M8YyAcPFzlU3pkbD+TPWekpSVRwR5RmThFXRHE6oiZVYCHqufvIQE1FRmi7jXrtPN+QE1IHGk5gBwzkYAnUYAtU1kBG6MIYNlrAthGxBeRX4O2ABvClowMOiDmg8Jk64IADDjiwWv+A9KpAS1TJrHZ+ooAU0bEoPE5LgXegPuv0FtpxYEPrAAAAAElFTkSuQmCC);
+    }
+    .social-btn__gplus {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAABbUlEQVR4Ae3XA6hfcRxA8c9s21bm8uJsZmPOGLJrRphtL2vZbrnmhdnGd/GvX/vrPr93Tro819BBi2KG2z6KjH5210wppnsnGsj30oTrogG9I+FtgwY+SfgtGtSEP+0x0BH47oxVxuumizGWOuVbQwYuGa2U0a40TOCPDf7H0XoDf0XODeToZISROgHm+Zo9cAnAEPu8EsIrewywxPcyK6sy8N1owCzPRYFP/BTZA2cA/TwSqdkDqwA7ReMExgPul5vZ7nR8jvIB3QC/yga2NnZgQ+2BKHOIRubsA9he+zmIkpO8Q6RaBzhTf+AcoK+HosSHegCe1B/4bgxgpmclHyOzAXNE/YFwBcBge7wUwkfnTAJwT5S3fCBsVshwI3WWwyaRNfAnl0hZ51emQM6rxiqlv/3+ioYJhB/OW2OiHrobZ7HD3guRIZDRjkBH4HNj/4DcbdDALQkzvRcN5FvTkSbc8akBDs4t03XQgvgHB5MrsGY2CH4AAAAASUVORK5CYII=);
+    }
+  </style>
+
+  <template>
+    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+      <div class="minilogo mdl-cell--hide-phone"></div>
+      <div>
+        <span>Aleksandar Diklić</span>
+        <a href="https://github.com/rastasheep">@rastasheep</a>
+      </div>
+      <div class="section-spacer"></div>
+
+      <div class="mdl-mini-footer--left-section" style="flex-direction: row;">
+        <a href="https://twitter.com/lesa_ns" class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
+          <span class="visuallyhidden">Twitter</span>
+        </a>
+        <a href="https://facebook.com/rastasheep" class="mdl-mini-footer--social-btn social-btn social-btn__facebook">
+          <span class="visuallyhidden">Facebook</span>
+        </a>
+        <a href="https://plus.google.com/+AleksandarDiklic" class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
+          <span class="visuallyhidden">Google Plus</span>
+        </a>
+      </div>
+    </div>
+  </template>
+
+</dom-module>
+
+<script>
+  Polymer({
+    is: "post-author-rastasheep",
+  });
+</script>

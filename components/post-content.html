@@ -1,0 +1,39 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="post-content">
+  <style>
+  .mdl-card__supporting-text {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .mdl-card__supporting-text {
+    width: 100%;
+    padding: 16px;
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+  }
+  .mdl-card__supporting-text > ::content > p {
+    max-width: 512px;
+    margin: 16px auto;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: justify;
+  }
+  </style>
+
+  <template>
+    <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+      <content></content>
+    </div>
+  </template>
+
+</dom-module>
+
+<script>
+  Polymer({
+    is: "post-content",
+  });
+</script>

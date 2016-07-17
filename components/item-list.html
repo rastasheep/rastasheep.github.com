@@ -1,0 +1,41 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="item-list">
+  <style>
+  .mdl-list__item--three-line, :host .mdl-list__item-primary-content {
+    height: auto;
+  }
+  </style>
+
+  <template>
+    <ul class="demo-list-three mdl-list" style=" max-width: 512px; margin: 16px auto; font-size: 16px; line-height: 28px; ">
+      <template is="dom-repeat" items="{{items}}">
+        <li class="mdl-list__item mdl-list__item--three-line">
+          <span class="mdl-list__item-primary-content">
+            <a href="{{item.link}}" target="_blank">{{item.title}}</a>
+            <span class="mdl-list__item-text-body">
+              {{item.description}}
+            </span>
+          </span>
+
+          <span class="mdl-list__item-secondary-content">
+            <a class="mdl-list__item-secondary-action" href="{{item.link}}" target="_blank">
+              <i class="material-icons">{{item.tag}}</i>
+            </a>
+          </span>
+        </li>
+      </template>
+    </ul>
+  </template>
+
+</dom-module>
+
+<script>
+  Polymer({
+    is: "item-list",
+    properties: {
+      items: Array,
+      value: function () { return []; } // Default value
+    }
+  });
+</script>

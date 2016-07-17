@@ -1,0 +1,35 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="view-source">
+  <style>
+    a {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+  </style>
+
+  <template>
+    <a href="[[url]]" target="_blank"
+      class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--white">
+      View Source
+      <span class="mdl-button__ripple-container">
+        <span class="mdl-ripple"></span>
+      </span>
+    </a>
+  </template>
+
+</dom-module>
+
+<script>
+  Polymer({
+    is: "view-source",
+    properties: {
+      items: Array,
+    }
+  });
+</script>

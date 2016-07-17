@@ -1,0 +1,34 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="main-navigation">
+  <style>
+  :host {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: rgba(238,238,238,0.7);
+    padding: 0;
+  }
+  .mdl-layout__header-row {
+    padding: 0;
+  }
+  </style>
+
+  <template>
+    <div class="mdl-layout__header-row">
+      <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font" style="margin: auto;">
+        <a class="mdl-navigation__link is-active" href="blog.html">Blog</a>
+        <a class="mdl-navigation__link" href="lab.html">Lab</a>
+        <a class="mdl-navigation__link" href="about.html">About</a>
+        <a class="mdl-navigation__link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </template>
+
+</dom-module>
+
+<script>
+  Polymer({
+    is: "main-navigation",
+  });
+</script>
