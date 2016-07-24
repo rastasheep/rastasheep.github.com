@@ -5,6 +5,12 @@
   .mdl-list__item--three-line, :host .mdl-list__item-primary-content {
     height: auto;
   }
+  .mdl-list__item-secondary-action i {
+    font-size: initial;
+  }
+  .mdl-list__item-secondary-action {
+    white-space: nowrap;
+  }
   </style>
 
   <template>
@@ -19,9 +25,12 @@
           </span>
 
           <span class="mdl-list__item-secondary-content">
-            <a class="mdl-list__item-secondary-action" href="{{item.link}}" target="_blank">
+            <a class="mdl-list__item-secondary-action" href="{{item.link}}" id="item-tag-{{index}}" target="_blank">
               <i class="material-icons">{{item.tag}}</i>
             </a>
+            <div class="mdl-tooltip" for$="item-tag-{{index}}">
+              {{item.tagTitle}}
+            </div>
           </span>
         </li>
       </template>
